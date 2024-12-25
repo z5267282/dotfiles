@@ -6,8 +6,6 @@
 . aliases/cse.sh
 . aliases/thesis.sh
 
-# thesis
-
 # cases
 alias lc='tr A-Z a-z'
 alias uc='tr a-z A-Z'
@@ -18,12 +16,6 @@ alias uhc='cd ~/"OneDrive - UNSW/Documents/UHC"'
 # diary
 alias prev='diary --prev'
 
-# git
-alias cam='git commit -am'
-alias com='git commit -m'
-alias first="git log --oneline | head -n 1 | cut -d ' ' -f1 | pbcopy"
-
-# grep
 alias grep='grep --colour=auto'
 
 # leak checking: https://stackoverflow.com/questions/65931093/valgrind-and-macos-big-sur
@@ -38,7 +30,6 @@ alias xx='exit 0'
 alias dode='code .'
 alias t=true
 alias quote='mv ~/Desktop/*.png ~"/OneDrive - UNSW/Pictures/quotes"'
-alias card='shell; cd card-renaming'
 alias pp='pwd | tr -d "\n" | pbcopy'
 alias x1='chmod +x'
 # stop creating .DS_Stores rather than adding them to .gitignores
@@ -60,6 +51,7 @@ alias clean='find . -name "Cargo.toml" -exec cargo clean --manifest-path {} \;'
 
 # scrap code
 alias scode="cd '$HOME/OneDrive - UNSW/Code'"
+alias card='scode; cd shell; cd card-renaming'
 
 # index
 alias index='grep -E "^#"'
