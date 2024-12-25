@@ -1,9 +1,9 @@
+. aliasrc
+. functionrc
+# [ -f "$HOME/.functionrc" ] && . "$HOME/.functionrc"
+
 # cse mount
 . ~/.cse-mount
-
-# aliases
-[ -f aliasrc ] && . aliasrc
-# [ -f "$HOME/.functionrc" ] && . "$HOME/.functionrc"
 
 # cpp
 export cpp=cs6771exam@cse.unsw.edu.au

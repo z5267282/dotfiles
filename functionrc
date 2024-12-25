@@ -1,3 +1,9 @@
+#!/usr/bin/env dash
+
+# Multi-line short shell scripts.
+# These are so small they should require no documentation.
+# Ideally to use them, just run `which $FUNCTION_NAME``
+
 # [s]afe rm
 srm() {
     [ $# -eq 1 ] || return 10
@@ -121,4 +127,3 @@ ct () {
     [ -n "$code" ] && code "$1"
     true
 }
-
