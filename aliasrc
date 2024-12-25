@@ -3,22 +3,10 @@
 # Entry point for controlling alises.
 
 . aliases/6080.sh
-
-# uni 
-alias y6="cd '/Users/sunny/OneDrive - UNSW/UNSW/Courses/Year 6 - 2024'"
-
-# ssh 
-alias ush='ssh z5267282@login.cse.unsw.edu' 
-alias ysh='ssh -Y z5267282@login.cse.unsw.edu'
+. aliases/cse.sh
+. aliases/thesis.sh
 
 # thesis
-# backend ssh
-alias bsh='ssh z5267282@ssh.pythonanywhere.com' 
-# alias start='. start'
-alias thesis='cd ~/Documents/thesis'
-alias back='thesis && code backend'
-alias front='thesis && code frontend'
-
 
 # cases
 alias lc='tr A-Z a-z'
