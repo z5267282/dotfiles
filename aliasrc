@@ -1,12 +1,11 @@
+#!/usr/bin/env dash
+
+# Entry point for controlling alises.
+
+. aliases/6080.sh
+
 # uni 
 alias y6="cd '/Users/sunny/OneDrive - UNSW/UNSW/Courses/Year 6 - 2024'"
-
-# 6080 marking
-alias 6080='nvm use 18.19.0 && npm start'
-# front-end marking
-alias fem='npx http-server frontend -c 1 -p 8080'
-# exam colour emoji picker
-alias clr='. clr'
 
 # ssh 
 alias ush='ssh z5267282@login.cse.unsw.edu' 
@@ -76,4 +75,3 @@ alias scode="cd '$HOME/OneDrive - UNSW/Code'"
 
 # index
 alias index='grep -E "^#"'
-

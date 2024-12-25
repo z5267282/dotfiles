@@ -1,6 +1,10 @@
 # cse mount
 . ~/.cse-mount
 
+# aliases
+[ -f aliasrc ] && . aliasrc
+# [ -f "$HOME/.functionrc" ] && . "$HOME/.functionrc"
+
 # cpp
 export cpp=cs6771exam@cse.unsw.edu.au
 
@@ -34,10 +38,6 @@ setopt INC_APPEND_HISTORY
 export HISTTIMEFORMAT="%Y-%m-%d %T"
 setopt EXTENDED_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
-
-# aliases
-[ -f "$HOME/.aliasrc" ] && . "$HOME/.aliasrc"
-[ -f "$HOME/.functionrc" ] && . "$HOME/.functionrc"
 
 PROMPT="%(?.%F{green}√%f.%F{red}X%f -> %F{red}%?%f) %F{39}%1~%f : "
 
