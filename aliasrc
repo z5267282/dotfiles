@@ -4,6 +4,8 @@
 
 . aliases/6080.sh
 . aliases/cse.sh
+. aliases/git.sh
+. aliases/rust.sh
 . aliases/thesis.sh
 
 # cases
@@ -42,12 +44,6 @@ alias go="open -a 'Google Chrome'"
 # projects
 alias prj="cd '$HOME/projects'"
 alias mve='prj; cd mve'
-
-# rust
-alias 'cargo new'='cargo new --vcs none'
-# remove all target dirs
-# from: https://www.reddit.com/r/rust/comments/vlpnfk/i_highly_recommend_writing_a_rust_app_to_delete/
-alias clean='find . -name "Cargo.toml" -exec cargo clean --manifest-path {} \;'
 
 # scrap code
 alias scode="cd '$HOME/OneDrive - UNSW/Code'"
