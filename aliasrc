@@ -7,11 +7,8 @@
 . aliases/git.sh
 . aliases/rust.sh
 . aliases/scrap-code.sh
+. aliases/shell.sh
 . aliases/thesis.sh
-
-# cases
-alias lc='tr A-Z a-z'
-alias uc='tr a-z A-Z'
 
 # cd
 alias uhc='cd ~/"OneDrive - UNSW/Documents/UHC"'
@@ -19,24 +16,9 @@ alias uhc='cd ~/"OneDrive - UNSW/Documents/UHC"'
 # diary
 alias prev='diary --prev'
 
-alias grep='grep --colour=auto'
-
-# leak checking: https://stackoverflow.com/questions/65931093/valgrind-and-macos-big-sur
-alias leak='leaks -atExit --'
-
 # ls 
 alias ls='ls -G'
 alias l='ls -1'
-
-# misc.
-alias xx='exit 0'
-alias dode='code .'
-alias t=true
-alias quote='mv ~/Desktop/*.png ~"/OneDrive - UNSW/Pictures/quotes"'
-alias pp='pwd | tr -d "\n" | pbcopy'
-alias x1='chmod +x'
-# stop creating .DS_Stores rather than adding them to .gitignores
-alias rds='find . -name .DS_Store -delete'
 
 # open related
 alias o='open'
