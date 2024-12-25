@@ -6,6 +6,7 @@
 . aliases/cse.sh
 . aliases/git.sh
 . aliases/rust.sh
+. aliases/scrap-code.sh
 . aliases/thesis.sh
 
 # cases
@@ -44,10 +45,6 @@ alias go="open -a 'Google Chrome'"
 # projects
 alias prj="cd '$HOME/projects'"
 alias mve='prj; cd mve'
-
-# scrap code
-alias scode="cd '$HOME/OneDrive - UNSW/Code'"
-alias card='scode; cd shell; cd card-renaming'
 
 # index
 alias index='grep -E "^#"'
