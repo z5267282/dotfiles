@@ -13,3 +13,13 @@ ln -s $PATH_TO_REPO/zshrc ~/.zshrc
 ```
 
 .
+
+# Secrets
+
+Any keys should be stored inside of
+
+```sh
+$HOME/.secrets
+```
+
+. This script will be sourced by the main controller `zshrc`.
