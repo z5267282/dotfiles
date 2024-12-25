@@ -7,14 +7,12 @@
 . aliases/git.sh
 . aliases/rust.sh
 . aliases/scrap-code.sh
+. aliases/scripts.sh
 . aliases/shell.sh
 . aliases/thesis.sh
 
 # cd
 alias uhc='cd ~/"OneDrive - UNSW/Documents/UHC"'
-
-# diary
-alias prev='diary --prev'
 
 # ls 
 alias ls='ls -G'
