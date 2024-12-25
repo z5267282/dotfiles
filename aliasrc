@@ -4,16 +4,9 @@
 
 . aliases/6080.sh
 . aliases/cse.sh
+. aliases/folders.sh
 . aliases/git.sh
 . aliases/rust.sh
-. aliases/scrap-code.sh
 . aliases/scripts.sh
 . aliases/shell.sh
 . aliases/thesis.sh
-
-# cd
-alias uhc='cd ~/"OneDrive - UNSW/Documents/UHC"'
-
-# projects
-alias prj="cd '$HOME/projects'"
-alias mve='prj; cd mve'
