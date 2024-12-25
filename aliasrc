@@ -14,17 +14,6 @@
 # cd
 alias uhc='cd ~/"OneDrive - UNSW/Documents/UHC"'
 
-# ls 
-alias ls='ls -G'
-alias l='ls -1'
-
-# open related
-alias o='open'
-alias go="open -a 'Google Chrome'"
-
 # projects
 alias prj="cd '$HOME/projects'"
 alias mve='prj; cd mve'
-
-# index
-alias index='grep -E "^#"'
