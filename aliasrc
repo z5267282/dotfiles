@@ -1,0 +1,79 @@
+# uni 
+alias y6="cd '/Users/sunny/OneDrive - UNSW/UNSW/Courses/Year 6 - 2024'"
+
+# 6080 marking
+alias 6080='nvm use 18.19.0 && npm start'
+# front-end marking
+alias fem='npx http-server frontend -c 1 -p 8080'
+# exam colour emoji picker
+alias clr='. clr'
+
+# ssh 
+alias ush='ssh z5267282@login.cse.unsw.edu' 
+alias ysh='ssh -Y z5267282@login.cse.unsw.edu'
+
+# thesis
+# backend ssh
+alias bsh='ssh z5267282@ssh.pythonanywhere.com' 
+# alias start='. start'
+alias thesis='cd ~/Documents/thesis'
+alias back='thesis && code backend'
+alias front='thesis && code frontend'
+
+
+# cases
+alias lc='tr A-Z a-z'
+alias uc='tr a-z A-Z'
+
+# cd
+alias uhc='cd ~/"OneDrive - UNSW/Documents/UHC"'
+
+# diary
+alias prev='diary --prev'
+
+# git
+alias cam='git commit -am'
+alias com='git commit -m'
+alias first="git log --oneline | head -n 1 | cut -d ' ' -f1 | pbcopy"
+
+# grep
+alias grep='grep --colour=auto'
+
+# leak checking: https://stackoverflow.com/questions/65931093/valgrind-and-macos-big-sur
+alias leak='leaks -atExit --'
+
+# ls 
+alias ls='ls -G'
+alias l='ls -1'
+
+# misc.
+alias xx='exit 0'
+alias dode='code .'
+alias t=true
+alias quote='mv ~/Desktop/*.png ~"/OneDrive - UNSW/Pictures/quotes"'
+alias card='shell; cd card-renaming'
+alias pp='pwd | tr -d "\n" | pbcopy'
+alias x1='chmod +x'
+# stop creating .DS_Stores rather than adding them to .gitignores
+alias rds='find . -name .DS_Store -delete'
+
+# open related
+alias o='open'
+alias go="open -a 'Google Chrome'"
+
+# projects
+alias prj="cd '$HOME/projects'"
+alias mve='prj; cd mve'
+
+# rust
+alias 'cargo new'='cargo new --vcs none'
+# remove all target dirs
+# from: https://www.reddit.com/r/rust/comments/vlpnfk/i_highly_recommend_writing_a_rust_app_to_delete/
+alias clean='find . -name "Cargo.toml" -exec cargo clean --manifest-path {} \;'
+
+# scrap code
+alias scode="cd '$HOME/OneDrive - UNSW/Code'"
+
+# index
+alias index='grep -E "^#"'
+

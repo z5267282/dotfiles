@@ -1,0 +1,124 @@
+# [s]afe rm
+srm() {
+    [ $# -eq 1 ] || return 10
+    mv "$1" ~/.Trash
+}
+
+# [r]ustc, [r]un then [d]elete executables
+rrd() {
+    case "$1" in
+        *.rs) ;;
+        *) return 10 ;;
+    esac
+    
+    rustc "$1" || return 20
+    binary="${1%.rs}"
+    shift
+    ./"$binary" "$@"
+    rm "$binary"
+}
+
+# copy name of file into clipboard
+name() {
+    [ $# -eq 1 ] || return 10
+    file="$1"
+    [ -e "$file" ] || return 20
+
+    printf '%s' "$file" | pbcopy
+}
+
+# [r]emo[v]e all [d]ot [u]nderscore files ._*
+# this is a function as it is a bit annoying to preserve the * character in an alias
+rmdu() {
+    find . -name '._*' -delete
+}
+
+6771 () {
+    6771-msg "$1" "$2" | pbcopy
+}
+
+# move all desktop pngs to given sprint
+sprint() {
+    mv ~/Desktop/*.png "$HOME/OneDrive - UNSW/UNSW/Courses/Year 5 - 2023/seng3011/sprints/$SPRINT"
+}
+
+# git [c]ommit [a]nd [p]ush
+# note cap -n is the same as git commit -m ... && git push
+cap () {
+    case $# in
+        1) git commit -am "$1";;
+        2) [ "$1" = '-n' ] || return 1
+           git commit -m "$2";;
+        *) return 2;;
+    esac
+    git push
+}
+
+# [f]ast g[++]
+f++ () {
+    [ $# -eq 1 ] || return 1
+    [ -f "$1" ] || return 2
+    [ "${1:(-4)}" = '.cpp' ] || return 3
+    # g++ -Wall -std=c++11 "$1" -o "${1%.cpp}"
+    g++ -std=c++11 "$1" -o "${1%.cpp}"
+}
+
+# [e]xecute f++ file
+e++ () {
+    [ $# -eq 1 ] || return 10
+    [ "${1:(-4)}" = '.cpp' ] || return 20
+    f++ "$1" && "./${1%.cpp}"
+}
+
+# [c]hange foler into newly made [dir]ectory
+cdir () {
+    mkdir "$1" && cd "$1"
+}
+
+# [r]e[m]ove all files in ~/[d]ownloads
+# place the file .rmdkeep to turn this off
+rmd () {
+    if [ -e ~/Downloads/.rmdkeep ]
+    then
+        echo "rmd has been disabled due to the presence of .rmdkeep"
+        return 0
+    fi
+    perl -MFile::Path -e '(-d) ? rmtree $_ : unlink $_ foreach(glob "~/Downloads/*")'
+}
+
+# new [s]hell script in vsc[ode] [ [-v]im ]
+sode() {
+    editor='code' && name="$1"
+    case $# in
+        1) ;;
+        2) [ "$1" = '-v' ] || return 1
+           editor='vim' && name="$2";;
+        *) return 2;;
+    esac
+    [ -f "$name" ] && return 3
+    echo '#!/bin/dash' > "$name" && echo '' >> "$name"
+    chmod +x "$name"
+    $editor "$name"
+}
+
+# [len]gth of arg
+len () {
+    [ $# -eq 1 ] && echo "${#1}"
+}
+
+# [c]pp [t]emplate
+ct () {
+    code='yes'
+    case $# in
+        1) ;;
+        2) [ "$1" = '-n' ] || return 1
+           code='' && shift;;
+        *) return 2;;
+    esac
+    [ "${1:(-4)}" = '.cpp' ] || return 3
+    [ -f "$1" ] && return 4
+    cp ~/template.cpp "$1"
+    [ -n "$code" ] && code "$1"
+    true
+}
+
