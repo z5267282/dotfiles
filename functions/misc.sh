@@ -1,26 +1,4 @@
-# Multi-line short shell scripts.
-# These are so small they should require no documentation.
-# Ideally to use them, just run `which $FUNCTION_NAME``
-
-# [s]afe rm
-srm() {
-    [ $# -eq 1 ] || return 10
-    mv "$1" ~/.Trash
-}
-
-# [r]ustc, [r]un then [d]elete executables
-rrd() {
-    case "$1" in
-        *.rs) ;;
-        *) return 10 ;;
-    esac
-    
-    rustc "$1" || return 20
-    binary="${1%.rs}"
-    shift
-    ./"$binary" "$@"
-    rm "$binary"
-}
+# Miscellaneous scripts that are more difficult to categorise
 
 # copy name of file into clipboard
 name() {
@@ -31,52 +9,14 @@ name() {
     printf '%s' "$file" | pbcopy
 }
 
-# [r]emo[v]e all [d]ot [u]nderscore files ._*
-# this is a function as it is a bit annoying to preserve the * character in an alias
-rmdu() {
-    find . -name '._*' -delete
-}
-
 # move all desktop pngs to given sprint
 sprint() {
     mv ~/Desktop/*.png "$HOME/OneDrive - UNSW/UNSW/Courses/Year 5 - 2023/seng3011/sprints/$SPRINT"
 }
 
-# git [c]ommit [a]nd [p]ush
-# note cap -n is the same as git commit -m ... && git push
-cap () {
-    case $# in
-        1) git commit -am "$1";;
-        2) [ "$1" = '-n' ] || return 1
-           git commit -m "$2";;
-        *) return 2;;
-    esac
-    git push
-}
-
-# [f]ast g[++]
-f++ () {
-    [ $# -eq 1 ] || return 1
-    [ -f "$1" ] || return 2
-    [ "${1:(-4)}" = '.cpp' ] || return 3
-    # g++ -Wall -std=c++11 "$1" -o "${1%.cpp}"
-    g++ -std=c++11 "$1" -o "${1%.cpp}"
-}
-
 # [c]hange foler into newly made [dir]ectory
 cdir () {
     mkdir "$1" && cd "$1"
-}
-
-# [r]e[m]ove all files in ~/[d]ownloads
-# place the file .rmdkeep to turn this off
-rmd () {
-    if [ -e ~/Downloads/.rmdkeep ]
-    then
-        echo "rmd has been disabled due to the presence of .rmdkeep"
-        return 0
-    fi
-    perl -MFile::Path -e '(-d) ? rmtree $_ : unlink $_ foreach(glob "~/Downloads/*")'
 }
 
 # [len]gth of arg
