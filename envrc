@@ -1,6 +1,0 @@
-#!/usr/bin/env dash
-
-# Entry point for environment variables.
-
-. env/path.sh
-. env/seng3011.sh
