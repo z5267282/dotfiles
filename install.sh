@@ -29,6 +29,7 @@ link_folder shell 'miscellaneous shell commands'
 # link stand-alone configuration files
 for singlerc in tmux.conf vimrc
 do
-    ln -s "$(realpath "$rc")" "$HOME/.$singlerc"
+    [ -L "$HOME/.$singlerc" ] && rm "$HOME/.$singlerc"
+    ln -s "$(realpath "$singlerc")" "$HOME/.$singlerc"
     printf '. "%s"\n' "$HOME/.$singlerc" >> ~/.zshrc
 done
