@@ -67,13 +67,6 @@ f++ () {
     g++ -std=c++11 "$1" -o "${1%.cpp}"
 }
 
-# [e]xecute f++ file
-e++ () {
-    [ $# -eq 1 ] || return 10
-    [ "${1:(-4)}" = '.cpp' ] || return 20
-    f++ "$1" && "./${1%.cpp}"
-}
-
 # [c]hange foler into newly made [dir]ectory
 cdir () {
     mkdir "$1" && cd "$1"
