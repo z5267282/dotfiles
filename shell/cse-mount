@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # from: https://abiram.me/cse-sshfs
 _SSHFS_ZID=z5267282
 # Your desired mountpoint for your CSE home directory
