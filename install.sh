@@ -32,3 +32,5 @@ do
     [ -L "$HOME/.$singlerc" ] && rm "$HOME/.$singlerc"
     ln -s "$(realpath "$singlerc")" "$HOME/.$singlerc"
 done
+
+printf 'successfully created ~/.zshrc'
