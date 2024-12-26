@@ -22,6 +22,18 @@ Any keys should be stored inside of
 $HOME/.secrets
 ```
 
+# File Structure
+
+Configurations are delegated by types into folders:
+
+| Folder    | Description                          |
+| --------- | ------------------------------------ |
+| `aliases` | All `alias` commands                 |
+| `env`     | Setting of any environment variables |
+| `shell`   | General Shell commands               |
+
+.
+
 . This script will be sourced by the main controller `zshrc`.
 
 # Other Notes
