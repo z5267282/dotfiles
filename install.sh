@@ -22,5 +22,13 @@ link_folder() {
     printf '\n' >> ~/.zshrc
 }
 
+# link all folders
 link_folder aliases 'shell aliases'
 link_folder env 'setting environment variables'
+
+# link stand-alone configuration files
+for singlerc in tmux.conf vimrc
+do
+    ln -s "$(realpath "$rc")" "$HOME/.$singlerc"
+    printf '. "%s"\n' "$HOME/.$singlerc" >> ~/.zshrc
+done
