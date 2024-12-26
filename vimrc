@@ -16,5 +16,4 @@ set timeout timeoutlen=5000 ttimeoutlen=100
 inoremap <S-Tab> <C-d>
 
 " Atom colours taken from https://github.com/joshdick/onedark.vim
-syntax on
-colorscheme onedark
+packadd! onedark.vim
