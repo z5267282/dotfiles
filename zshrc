@@ -12,9 +12,6 @@ export cpp=cs6771exam@cse.unsw.edu.au
 
 export MVE_CONFIGS="$HOME/projects/mve-configs/mac"
 
-# thesis
-export BE_PORT=5000
-
 export SCRIPTS="$HOME/scripts"
 export LSCOLORS='gxfxcxdxbxegedabagacad'
 #                1122334455667788991011
