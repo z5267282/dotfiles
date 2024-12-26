@@ -27,6 +27,7 @@ link_folder env 'setting environment variables'
 link_folder shell 'miscellaneous shell commands'
 
 # link stand-alone configuration files
+printf '# stand-alone configuration files\n' >> ~/.zshrc
 for singlerc in tmux.conf vimrc
 do
     [ -L "$HOME/.$singlerc" ] && rm "$HOME/.$singlerc"
