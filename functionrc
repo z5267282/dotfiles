@@ -90,21 +90,6 @@ rmd () {
     perl -MFile::Path -e '(-d) ? rmtree $_ : unlink $_ foreach(glob "~/Downloads/*")'
 }
 
-# new [s]hell script in vsc[ode] [ [-v]im ]
-sode() {
-    editor='code' && name="$1"
-    case $# in
-        1) ;;
-        2) [ "$1" = '-v' ] || return 1
-           editor='vim' && name="$2";;
-        *) return 2;;
-    esac
-    [ -f "$name" ] && return 3
-    echo '#!/bin/dash' > "$name" && echo '' >> "$name"
-    chmod +x "$name"
-    $editor "$name"
-}
-
 # [len]gth of arg
 len () {
     [ $# -eq 1 ] && echo "${#1}"
