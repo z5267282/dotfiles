@@ -109,19 +109,3 @@ sode() {
 len () {
     [ $# -eq 1 ] && echo "${#1}"
 }
-
-# [c]pp [t]emplate
-ct () {
-    code='yes'
-    case $# in
-        1) ;;
-        2) [ "$1" = '-n' ] || return 1
-           code='' && shift;;
-        *) return 2;;
-    esac
-    [ "${1:(-4)}" = '.cpp' ] || return 3
-    [ -f "$1" ] && return 4
-    cp ~/template.cpp "$1"
-    [ -n "$code" ] && code "$1"
-    true
-}
