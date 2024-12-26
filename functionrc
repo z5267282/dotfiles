@@ -37,10 +37,6 @@ rmdu() {
     find . -name '._*' -delete
 }
 
-6771 () {
-    6771-msg "$1" "$2" | pbcopy
-}
-
 # move all desktop pngs to given sprint
 sprint() {
     mv ~/Desktop/*.png "$HOME/OneDrive - UNSW/UNSW/Courses/Year 5 - 2023/seng3011/sprints/$SPRINT"
