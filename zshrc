@@ -10,14 +10,6 @@
 # cpp
 export cpp=cs6771exam@cse.unsw.edu.au
 
-export MVE_CONFIGS="$HOME/projects/mve-configs/mac"
-
-export SCRIPTS="$HOME/scripts"
-export LSCOLORS='gxfxcxdxbxegedabagacad'
-#                1122334455667788991011
-
-export PS2='> '
-
 # history
 # # https://www.soberkoder.com/better-zsh-history/
 export HISTFILE=~/.zsh_history
@@ -31,8 +23,6 @@ setopt INC_APPEND_HISTORY
 export HISTTIMEFORMAT="%Y-%m-%d %T"
 setopt EXTENDED_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
-
-PROMPT="%(?.%F{green}√%f.%F{red}X%f -> %F{red}%?%f) %F{39}%1~%f : "
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
