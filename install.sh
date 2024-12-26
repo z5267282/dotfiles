@@ -26,11 +26,18 @@ link_folder functions 'short shell functions'
 link_folder shell 'miscellaneous shell commands'
 
 # link stand-alone configuration files
-printf '# stand-alone configuration files\n' >> ~/.zshrc
 for singlerc in tmux.conf vimrc
 do
     [ -L "$HOME/.$singlerc" ] && rm "$HOME/.$singlerc"
     ln -s "$(realpath "$singlerc")" "$HOME/.$singlerc"
 done
 
-printf 'successfully created ~/.zshrc'
+# load secrets
+printf '# load secrets\n' >> ~/.zshrc
+printf '[ -f ~/.secrets ] && . ~/.secrets' >> ~/.zshrc
+
+# conclude script
+printf '# run to make sure that we start with last exit status 0\n' >> ~/.zshrc
+printf 'true\n' >> ~/.zshrc
+
+printf 'successfully created ~/.zshrc\n'
