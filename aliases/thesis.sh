@@ -1,5 +1,3 @@
-#!/usr/bin/env dash
-
 # 5th Year Software-Engineering Thesis Aliases.
 
 # backend ssh

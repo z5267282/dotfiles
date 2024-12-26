@@ -1,5 +1,3 @@
-#!/usr/bin/env dash
-
 # For controlling the terminal display.
 
 export LSCOLORS='gxfxcxdxbxegedabagacad'

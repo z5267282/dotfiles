@@ -1,5 +1,3 @@
-#!/usr/bin/env dash
-
 # Multi-line short shell scripts.
 # These are so small they should require no documentation.
 # Ideally to use them, just run `which $FUNCTION_NAME``

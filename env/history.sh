@@ -1,5 +1,3 @@
-#!/usr/bin/env dash
-
 # For controlling Shell history.
 
 # https://www.soberkoder.com/better-zsh-history/

@@ -1,5 +1,3 @@
-#!/usr/bin/env dash
-
 # Setting the $PATH environment variable.
 
 # PATH variable

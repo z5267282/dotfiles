@@ -1,5 +1,3 @@
-#!/usr/bin/env dash
-
 # start a new cargo project without making git repo
 alias 'cargo new'='cargo new --vcs none'
 

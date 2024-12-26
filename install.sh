@@ -1,5 +1,3 @@
-#!/usr/bin/env dash
-
 printf '# zshrc installed by %s\n' "$(realpath "$0")" > ~/.zshrc
 printf '\n' >> ~/.zshrc
 

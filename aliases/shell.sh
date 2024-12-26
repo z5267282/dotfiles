@@ -1,5 +1,3 @@
-#!/usr/bin/env dash
-
 # Various miscellaneous Shell-command shorthands.
 
 # ls 
