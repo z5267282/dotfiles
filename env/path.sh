@@ -11,7 +11,6 @@ export PATH="$HOME/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH" 
 
 export PATH="$SCRIPTS:$PATH"
-export PATH="$HOME/cpp-scripts/bin:$PATH"
 
 # git-filter-repo
 export PATH="$HOME/git-filter-repo:$PATH"
