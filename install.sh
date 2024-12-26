@@ -3,7 +3,6 @@
 printf '# zshrc installed by %s\n' "$(realpath "$0")" > ~/.zshrc
 printf '\n' >> ~/.zshrc
 
-
 link_folder() {
     name="$1"
     description="$2"
