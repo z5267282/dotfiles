@@ -1,7 +1,3 @@
-. aliasrc
-. functionrc
-. envrc
-
 [ -f ~/.secrets ] && . ~/.secrets
 
 setopt nullglob
