@@ -3,12 +3,22 @@
 printf '# zshrc installed by %s\n' "$(realpath "$0")" > ~/.zshrc
 printf '\n' >> ~/.zshrc
 
-[ -d ~/.aliases ] && rm -rf ~/.aliases
-mkdir ~/.aliases
-cd aliases
-for rc in *
-do
-    ln -s "$(realpath "$rc")" "$HOME/.aliases/$rc"
-    printf '. "%s"\n' "$HOME/.aliases/$rc" >> ~/.zshrc
-done
-cd ..
+
+link_folder() {
+    name="$1"
+    description="$2"
+
+    printf '# %s\n' "$description" >> ~/.zshrc
+
+    [ -d  "$HOME/.$name" ] && rm -rf "$HOME/.$name" 
+    mkdir "$HOME/.$name" 
+    cd "$name"
+    for rc in *
+    do
+        ln -s "$(realpath "$rc")" "$HOME/.$name/$rc"
+        printf '. "%s"\n' "$HOME/.$name/$rc" >> ~/.zshrc
+    done
+    cd ..
+}
+
+link_folder aliases 'shell aliases'
