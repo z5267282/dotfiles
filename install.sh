@@ -30,5 +30,4 @@ for singlerc in tmux.conf vimrc
 do
     [ -L "$HOME/.$singlerc" ] && rm "$HOME/.$singlerc"
     ln -s "$(realpath "$singlerc")" "$HOME/.$singlerc"
-    printf '. "%s"\n' "$HOME/.$singlerc" >> ~/.zshrc
 done
