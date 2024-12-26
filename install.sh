@@ -24,6 +24,7 @@ link_folder() {
 # link all folders
 link_folder aliases 'shell aliases'
 link_folder env 'setting environment variables'
+link_folder shell 'miscellaneous shell commands'
 
 # link stand-alone configuration files
 for singlerc in tmux.conf vimrc
