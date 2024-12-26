@@ -5,11 +5,10 @@ The files are all named without a leading '.' so they can be seen in the file sy
 
 # Installation
 
-Run this command:
+Run this command to dynamically generate `~/.zshrc` with the correct file paths:
 
 ```sh
-# replace PATH_TO_REPO
-ln -s $PATH_TO_REPO/zshrc ~/.zshrc
+./install.sh
 ```
 
 .
@@ -26,13 +25,12 @@ $HOME/.secrets
 
 Configurations are delegated by types into folders:
 
-| Folder    | Description                          |
-| --------- | ------------------------------------ |
-| `aliases` | All `alias` commands                 |
-| `env`     | Setting of any environment variables |
-| `shell`   | General Shell commands               |
-
-.
+| Folder      | Description                          |
+| ----------- | ------------------------------------ |
+| `aliases`   | All `alias` commands                 |
+| `env`       | Setting of any environment variables |
+| `functions` | Minor self-documenting functions     |
+| `shell`     | General Shell commands               |
 
 . This script will be sourced by the main controller `zshrc`.
 
