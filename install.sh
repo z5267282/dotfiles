@@ -9,6 +9,6 @@ cd aliases
 for rc in *
 do
     ln -s "$(realpath "$rc")" "$HOME/.aliases/$rc"
-    echo ". $HOME/.aliases/$rc" >> ~/.zshrc
+    printf '. "%s"\n' "$HOME/.aliases/$rc" >> ~/.zshrc
 done
 cd ..
