@@ -34,7 +34,7 @@ done
 
 # load secrets
 printf '# load secrets\n' >> ~/.zshrc
-printf '[ -f ~/.secrets ] && . ~/.secrets' >> ~/.zshrc
+printf '[ -f ~/.secrets ] && . ~/.secrets\n' >> ~/.zshrc
 
 # conclude script
 printf '# run to make sure that we start with last exit status 0\n' >> ~/.zshrc
