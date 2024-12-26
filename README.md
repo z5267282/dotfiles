@@ -23,3 +23,7 @@ $HOME/.secrets
 ```
 
 . This script will be sourced by the main controller `zshrc`.
+
+# Other Notes
+
+Any scripts that edit `$PATH` by adding something to `zshrc` will need to be manually overridden.
