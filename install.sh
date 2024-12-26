@@ -19,6 +19,8 @@ link_folder() {
         printf '. "%s"\n' "$HOME/.$name/$rc" >> ~/.zshrc
     done
     cd ..
+    printf '\n' >> ~/.zshrc
 }
 
 link_folder aliases 'shell aliases'
+link_folder env 'setting environment variables'
