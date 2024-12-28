@@ -18,7 +18,7 @@ Run this command to dynamically generate `~/.zshrc` with the correct file paths:
 Any keys should be stored inside of
 
 ```sh
-$HOME/.secrets
+~/.secretsrc
 ```
 
 # File Structure

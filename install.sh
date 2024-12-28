@@ -32,9 +32,17 @@ do
     ln -s "$(realpath "$singlerc")" "$HOME/.$singlerc"
 done
 
+# load $PATH environment variable
+[ -L ~/.pathrc ] && rm ~/.pathrc
+ln -s "$(realpath pathrc)" "$HOME/.pathrc"
+printf '# load $PATH variable\n' >> ~/.zshrc
+printf '. ~/.pathrc\n' >> ~/.zshrc
+printf '\n' >> ~/.zshrc
+
 # load secrets
 printf '# load secrets\n' >> ~/.zshrc
-printf '[ -f ~/.secrets ] && . ~/.secrets\n' >> ~/.zshrc
+printf '[ -f ~/.secretsrc ] && . ~/.secretsrc\n' >> ~/.zshrc
+printf '\n' >> ~/.zshrc
 
 # conclude script
 printf '# run to make sure that we start with last exit status 0\n' >> ~/.zshrc

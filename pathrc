@@ -1,4 +1,5 @@
 # Setting the $PATH environment variable.
+# We set these separately in case there are environment variable dependencies.
 
 # PATH variable
 export PATH="$HOME/OneDrive - UNSW/UNSW/Courses/Year 5 - 2023/cs6771/remark:$PATH"
