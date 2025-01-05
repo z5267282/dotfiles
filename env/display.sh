@@ -1,7 +1,7 @@
 # For controlling the terminal display.
 
-export LSCOLORS='gxfxcxdxbxegedabagacad'
-#                1122334455667788991011
+export LS_COLORS='gxfxcxdxbxegedabagacad'
+#                 1122334455667788991011
 
 export PS2='> '
 
