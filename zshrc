@@ -1,3 +1,0 @@
-[ -f ~/.secrets ] && . ~/.secrets
-
-true
