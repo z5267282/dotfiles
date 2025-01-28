@@ -14,3 +14,7 @@ export LS_COLORS="di=01;34:"
 export PS2='> '
 
 export PROMPT="%(?.%F{green}√%f.%F{red}X%f -> %F{red}%?%f) %F{39}%1~%f : "
+
+# make man pager better with bat
+export MANPAGER=bat
+
