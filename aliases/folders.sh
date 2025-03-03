@@ -8,4 +8,4 @@ alias mve='prj; cd mve'
 alias scode="cd '$HOME/OneDrive - UNSW/Code'"
 alias card='scode; cd shell; cd card-renaming'
 
-alias uhc='cd ~/"OneDrive - UNSW/Documents/UHC"'
+alias uhc='cd "/Users/sunny/Library/Mobile Documents/com~apple~CloudDocs/Sunny/uhc"'
