@@ -20,7 +20,7 @@ export PATH="$HOME/git-filter-repo:$PATH"
 export PATH="$PATH:."
 
 # get PATH to all external programs
-launchctl setenv PATH $PATH
+uname | grep -Fq Darwin && launchctl setenv PATH $PATH
 
 # remove duplicates in PATH
 typeset -U path
