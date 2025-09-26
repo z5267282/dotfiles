@@ -23,3 +23,10 @@ cdir () {
 len () {
     [ $# -eq 1 ] && echo "${#1}"
 }
+
+# [m]o[v]e to [l]ower[c]ase
+mvlc() {
+    [ $# -eq 1 ] || return 10
+    fullpath="$1"
+    mv "$fullpath" "$(dirname "$fullpath")/$(basename "$fullpath" | tr -s ' ' | tr 'A-Z' 'a-z')" || return 20
+}
