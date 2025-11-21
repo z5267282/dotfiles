@@ -6,7 +6,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # from: https://www.nvmnode.com/extend/nvmrc.html
 # automatically load node version from .nvmrc if present
-# note from the docs, this only works in integrated terminals with .nvmrc found in the project root
 
 # place this after nvm initialization!
 autoload -U add-zsh-hook
